@@ -1,43 +1,239 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-      background-color: rgb(0, 0, 0);
+      padding: 90px 20px 0 20px;
+      font-family: sans-serif;
+      background-color: #000000;
+      color: white;
     }
 
 .nav {
-  background-color: #333;
-  overflow: auto; /* Opcional, para gestionar el desplazamiento */
-}
+  display: flex;
+  justify-content: space-between;
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Opcional, para evitar que los elementos se deslicen */
+  max-width: 992px;
+  margin: 0 auto;
 }
-
-nav li {
-  float: left;
-}
-
-nav li a {
-  display: block;
+.nav-link {
   color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
-
-nav li a:hover {
-  background-color: #ddd;
-  color: black;
+.nav-link:hover {
+  color: #3ba3f3;
+  transition: 0.5s;
+}
+.header {
+  background-color: #000000;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;              /* Añade flexbox */
+  align-items: center;        /* Centra verticalmente el contenido */
+  padding-top: 20px;
+  z-index: 1000;
+}
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7));
+}
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+.nav-menu li {
+      position: relative; /* Necesario para posicionamiento del submenú */
+      display: inline-block; /* Cambiado a inline-block para permitir el submenú */
+    }
+.nav-menu li:hover > ul { 
+      display: block; /* Muestra el submenú al pasar el mouse */
+    }
+.nav-menu ul {
+  display: none; /* Oculta el submenú por defecto */
+  position: absolute; /* Posiciona el submenú */
+  top: 100%; /* Ajusta la posición vertical del submenú */
+  left: 0; /* Alinea el submenú a la izquierda del elemento padre */
+  background-color: #030303; /* Color de fondo del submenú */
+  min-width: 160px;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
 }
 
-nav li a:hover::after {
-  content: "";
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+.nav-menu-link:hover {
+      background-color: #133b82;
+      transition: 0.5s;
+}
+.nav-menu-item-des {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
   display: block;
+  position: relative; /* Necesario para posicionamiento del submenú */
+    }
+.nav-sub-menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+}
+
+.nav-sub-menu-link {
+  padding: 6px 16px;
+  border-radius: 3px;
+  display: block;
+}
+
+.nav-sub-menu-link:hover {
+      background-color: #133b82;
+      transition: 0.5s;
+}
+.nav-sub-menu-item {
+  font-size: 16px;
+  margin: 0;
+  line-height: 40px;
+  text-transform: uppercase;
   width: 100%;
-  height: 3px;
-  background-color: black; /* El color de la línea */
-  position: absolute; /* Posiciona la línea debajo del enlace */
-  bottom: 0; /* Asegura que esté en la parte inferior */
-  left: 0; /* Asegura que esté en el borde izquierdo */
+}
+.cart-link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  color: white;
+}
+.cart-link:hover {
+  transform: scale(1.1);
+  color: #3ba3f3;
+}
+/* Style de carritos de compras box */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+.producto {
+  background: #181818;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  width: 220px;
+  color: #fff;
+  text-align: center;
+}
+.producto img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.producto .precio {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #3ba3f3;
+}
+.producto button {
+  background: #3ba3f3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.producto button:hover {
+  background: #2176bd;
+}
+
+/* Comienzo Stylo de slider */
+.slider {
+  width: 100%;
+  max-width: 1806px;
+  height: 415px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+    background: #222; 
+}
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: margin-left 0.5s;
+  margin-left: 0;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide img {
+  width: 100%;
+  height: 100%; 
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+}
+input[type="radio"] {
+  display: none;
+}
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.manual-btn {
+  border: 2px solid #000000;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #3ba3f3;
+  transition: background 0.3s;
+}
+.manual-btn:hover {
+  background: #2176bd;
+}
+
+/* Slider functionality */
+#slide1:checked ~ .first {
+  margin-left: 0;
+}
+#slide2:checked ~ .first {
+  margin-left: -100%;
+}
+#slide3:checked ~ .first {
+  margin-left: -200%;
 }

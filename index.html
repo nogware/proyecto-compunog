@@ -4,63 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <title>COMPUNOG - INSUMOS INFORMATICOS</title>
 </head>
 <body>
-    <header>
-        
-        <nav>
-            <img src="img/favicon-32x32.png" alt="logo compunog">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a>
-                <ul>
-                    <li><a href="#">Componentes</a>
-                        <ul>
-                            <li><a href="#">Fuentes</a></li>
-                            <li><a href="#">Procesadores</a></li>
-                            <li><a href="#">Memorias RAM</a></li>
-                            <li><a href="#">Discos Duros</a></li>
-                            <li><a href="#">Placas de Video</a></li>
-                    </ul></li>
-                    <li><a href="#">Monitores</a>
-                        <ul>
-                            <li><a href="#">60hz / 75hz</a></li>
-                            <li><a href="#">100hz</a></li>
-                            <li><a href="#">144hz</a></li>
-                            <li><a href="#">165hz</a></li>
-                            <li><a href="#">180hz</a></li>
-                            <li><a href="#">Soportes</a></li>
-                    </ul></li>
-                    <li><a href="#">Gabinetes</a>
-                        <ul>
-                            <li><a href="#">Gamer</a></li>
-                            <li><a href="#">Kit</a></li>
-                    </ul></li>
-                    <li><a href="#">Perifericos</a>
-                        <ul>
-                            <li><a href="#">Mouse</a></li>
-                            <li><a href="#">Teclados</a></li>
-                            <li><a href="#">Auriculares</a></li>
-                            <li><a href="#">Webcams</a></li>
-                            <li><a href="#">Micrófonos</a></li>
-                            <li><a href="#">Parlantes</a></li>
-                    </ul></li>
-                    <li><a href="#">Accesorios</a>
-                        <ul>
-                            <li><a href="#">Cables</a></li>
-                            <li><a href="#">Adaptadores</a></li>
-                            <li><a href="#">Soportes para celular</a></li>
-                            <li><a href="#">Cargadores</a></li>
-                        </ul>
-                        
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">ENVIOS</a></li>
-            <li><a href="#">CONTACTO</a></li>
-          </ul>
+    <header class="header">
+        <nav class="nav">
+          <a href="index.html" class="logo-link">
+            <img src="img/logocompunog500.png" class="logo" width="140" height="65">
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Componentes de PC</a>
+                <ul class="nav-sub-menu">
+                    <li class="nav-sub-menu-item"><a href="pages/componentes/Fuentes/fuentes.html" class="nav-sub-menu-link nav-link">Fuentes</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">Placas de Video</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">Motherboard</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">Memorias RAM</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">Discos Duros</a></li>
+                </ul></li>
+                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Monitores</a>
+                <ul class="nav-sub-menu">
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">60hz</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">100hz</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">144hz</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">180hz</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">250hz</a></li>
+                    <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">Soportes</a></li>
+                </ul></li>
+                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Contacto</a></li>
+            </ul>
+            <a href="#" class="cart-link" title="Carrito de compras">
+            <!-- Ícono de carrito SVG -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+        </a>
         </nav>
     </header>
+    <!-- comienzo de slider -->
+    <div class="slider">
+  <div class="slides">
+    <input type="radio" name="radio-btn" id="slide1" checked>
+    <input type="radio" name="radio-btn" id="slide2">
+    <input type="radio" name="radio-btn" id="slide3">
+
+    <div class="slide first">
+      <img src="img/slider1.gif" alt="Imagen 1">
+    </div>
+    <div class="slide">
+      <img src="img/slider2.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide">
+      <img src="img/slider3.svg" alt="Imagen 3">
+    </div>
+
+    <div class="navigation-manual">
+      <label for="slide1" class="manual-btn"></label>
+      <label for="slide2" class="manual-btn"></label>
+      <label for="slide3" class="manual-btn"></label>
+    </div>
+  </div>
+</div>
 </body>
 </html>
