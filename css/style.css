@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
       padding: 90px 20px 0 20px;
@@ -227,7 +228,7 @@ input[type="radio"] {
   background: #2176bd;
 }
 
-/* Slider functionality */
+/* Slider funcion */
 #slide1:checked ~ .first {
   margin-left: 0;
 }
@@ -236,4 +237,131 @@ input[type="radio"] {
 }
 #slide3:checked ~ .first {
   margin-left: -200%;
+}
+
+/* Estilo de section ofertas*/
+.articulos-slider {
+  background: #181818;
+  border: 1px solid #fff;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.articulos-slider {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.articulos-track {
+  display: flex;
+  transition: transform 0.5s;
+  gap: 24px;
+  width: 100%;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.articulo {
+  min-width: 180px;
+  max-width: 200px;
+  min-height: 340px;
+  background: #181818;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  text-align: center;
+  border: 1px solid transparent; 
+  transition: border-color 0.3s;
+  margin: auto;
+}
+
+.articulo img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.articulo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  border-color: #3ba3f3;
+}
+
+.articulos-prev,
+.articulos-next {
+  background: #3ba3f3; 
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.8;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.articulos-prev { left: 10px; }
+.articulos-next { right: 10px; }
+.articulos-prev:hover,
+.articulos-next:hover {
+  background: #2176bd;
+  opacity: 1;
+}
+
+.precio-tachado {
+  text-decoration: line-through;
+  color: #999;
+  margin-top: 20px;
+}
+.precio-oferta {
+  color: #3ba3f3;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.precio-oferta:hover {
+  color: #2176bd;
+  transition: 0.5s;
+}
+
+.ver-mas {
+  background: #3ba3f3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  
+}
+
+.btn-ver-mas {
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-ver-mas:hover {
+  color: #2176bd;
+  transition: 0.5s;
 }
