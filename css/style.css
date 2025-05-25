@@ -240,13 +240,7 @@ input[type="radio"] {
 }
 
 /* Estilo de section ofertas*/
-.articulos-slider {
-  background: #181818;
-  border: 1px solid #fff;
-  padding: 40px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
+
 .articulos-slider {
   position: relative;
   width: 90%;
@@ -255,6 +249,11 @@ input[type="radio"] {
   overflow: hidden;
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 40px 20px;
+  border: 1px solid #fff;
+  background: #181818;
 }
 
 .articulos-track {
