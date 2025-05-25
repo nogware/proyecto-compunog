@@ -260,15 +260,15 @@ input[type="radio"] {
 .articulos-track {
   display: flex;
   transition: transform 0.5s;
-  gap: 24px;
+  gap: 5px;
   width: 100%;
   padding: 0 60px;
   box-sizing: border-box;
 }
 
 .articulo {
-  min-width: 180px;
-  max-width: 200px;
+  min-width: 230px;
+  max-width: 230px;
   min-height: 340px;
   background: #181818;
   color: #fff;
