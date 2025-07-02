@@ -156,7 +156,7 @@ body {
   pointer-events: none;
   z-index: 10;
 }
-/* Style de carritos de compras box */
+/* Style de carritos de compras box en page fuentes */
 .productos {
   display: flex;
   flex-wrap: wrap;

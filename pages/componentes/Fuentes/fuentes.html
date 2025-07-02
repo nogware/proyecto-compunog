@@ -31,7 +31,7 @@
                     <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">250hz</a></li>
                     <li class="nav-sub-menu-item"><a href="#" class="nav-sub-menu-link nav-link">Soportes</a></li>
                 </ul></li>
-                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Contacto</a></li>
+                <li class="nav-menu-item"><a href="../../contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
             </ul>
             <a href="#" class="cart-link" title="Carrito de compras">
             <!-- Ícono de carrito SVG -->
@@ -40,27 +40,92 @@
                 <circle cx="20" cy="21" r="1"/>
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
             </svg>
+            <span class="cart-count" id="cart-count">0</span>
         </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
         </nav>
     </header>
-    <h1>Fuentes</h1>
+    
 <section class="productos">
   <div class="producto">
-    <img src="ruta/a/imagen-fuente1.jpg" alt="Fuente 1">
-    <h3>Fuente ATX 500W</h3>
-    <p>Fuente de alimentación ATX 500W certificada.</p>
-    <span class="precio">$15.000</span>
-    <button>Agregar al carrito</button>
+    <img src="../../../img/Fuentes/tr2-500w.webp" alt="Fuente 1">
+    <h3>Fuente Thermaltake TR2</h3>
+    <p>ATX 500W de potencia.</p>
+    <span class="precio">$75.000</span>
+    <button class="btn-agregar" data-id="11" data-nombre="FUENTE ATX 500W" data-precio="75000">Agregar al carrito</button>
   </div>
   <div class="producto">
-    <img src="ruta/a/imagen-fuente2.jpg" alt="Fuente 2">
-    <h3>Fuente ATX 650W</h3>
-    <p>Fuente de alimentación ATX 650W certificada.</p>
-    <span class="precio">$22.000</span>
-    <button>Agregar al carrito</button>
+    <img src="../../../img/Fuentes/tr2-600w.jpg" alt="Fuente 2">
+    <h3>Fuente Thermaltake TR2</h3>
+    <p>ATX 600W de potencia.</p>
+    <span class="precio">$82.000</span>
+    <button class="btn-agregar" data-id="12" data-nombre="FUENTE 600W ATX" data-precio="82000">Agregar al carrito</button>
+  </div>
+  <div class="producto">
+    <img src="../../../img/Fuentes/PS650PW.png" alt="Fuente 3">
+    <h3>Fuente XFX</h3>
+    <p>PS650PW +80 PLUS WHITE.</p>
+    <span class="precio">$85.000</span>
+    <button class="btn-agregar" data-id="13" data-nombre="FUENTE XFX 650w 80plus white" data-precio="85000">Agregar al carrito</button>
   </div>
   <!-- Agrega más productos aquí -->
 </section>
-    
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section medios-pago">
+        <h3>MEDIOS DE PAGO</h3>
+  <ul class="footer-list">
+    <li>
+      <img src="../../../img/transferencia-bancaria.png" alt="Transferencia Bancaria" class="footer-img">
+      
+    </li>
+    <li>
+      <img src="../../../img/mercadopago.png" alt="MercadoPago" class="footer-img">
+      
+    </li>
+    <li>
+      <img src="../../../img/mediosdepago.png" alt="Visa" class="footer-img">
+      
+    </li>
+    <!-- Agregar más medios de pago -->
+  </ul>
+</div>
+      <div class="footer-section redes">
+        <h3>REDES</h3>
+        <ul class="footer-list redes">
+          <li>
+            <a href="https://www.instagram.com/compunog/" target="_blank" class="footer-link">
+               <img src="../../../img/instagram.png" alt="Instagram" class="footer-img">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="footer-link">
+              <img src="../../../img/facebook.png" alt="Facebook" class="footer-img">
+            </a>
+            
+          </li>
+            <li>
+              <a href="#" target="_blank" class="footer-link">
+            <img src="../../../img/whatsapp.png" alt="Whatsapp" class="footer-img">
+          </a>
+          </li>
+    </div>
+    </div>
+        <div class="footer-bottom">
+  &copy; 2025 COMPUNOG. Todos los derechos reservados.
+</div>
+</footer>
+       <script src="../../../script/style.js"></script>  
+          <!-- Contenedor del carrito (inicialmente oculto) -->
+<div id="carrito-modal" style="display:none; position:fixed; top:70px; right:20px; background:#222; color:#fff; padding:20px; border-radius:8px; z-index:2000; min-width:250px;">
+  <h3>Carrito</h3>
+  <ul id="carrito-lista" style="list-style:none; padding:0; margin:0;"></ul>
+  <button id="cerrar-carrito" style="margin-top:10px;">Cerrar</button>
+  <button id="vaciar-carrito" style="margin-top:10px; margin-left:10px; background:#e74c3c; color:#fff;">Vaciar carrito</button>
+</div>
 </body>
 </html>
