@@ -93,7 +93,7 @@
 
        </div>
         <div class="ver-mas">
-          <a href="#" class="btn-ver-mas">Ver más</a>
+          <button class="btn-agregar" data-id="1" data-nombre="Teclado Gamer" data-precio="7000">Agregar al carrito</button>
         </div>
        
       
@@ -110,7 +110,7 @@
 
        </div>
         <div class="ver-mas">
-          <a href="#" class="btn-ver-mas">Ver más</a>
+          <button class="btn-agregar" data-id="2" data-nombre="Gabinete Gamer" data-precio="136000">Agregar al carrito</button>
         </div>
        
     </article>
@@ -126,41 +126,41 @@
 
        </div>
         <div class="ver-mas">
-          <a href="#" class="btn-ver-mas">Ver más</a>
-        </div>
-       
-      
-    </article>
-
-    <article class="articulo">
-      <img src="img/articulo3.svg" alt="Artículo 3">
-      <p>AURICULAR GAMER XFX KABUTO GH-01 RGB 7.1 USB </p> 
-       <div class="precio-tachado">
-        <s>$41.000</s><br>
-       </div> 
-       <div class="precio-oferta">
-        $35.000 
-
-       </div>
-        <div class="ver-mas">
-          <a href="#" class="btn-ver-mas">Ver más</a>
+          <button class="btn-agregar" data-id="3" data-nombre="Auricular" data-precio="35000">Agregar al carrito</button>
         </div>
        
       
     </article>
 
     <article class="articulo">
-      <img src="img/articulo3.svg" alt="Artículo 3">
-      <p>AURICULAR GAMER XFX KABUTO GH-01 RGB 7.1 USB </p> 
+      <img src="img/articulo4.svg" alt="Artículo 4">
+      <p>SILLA ERGONOMICA OFICINA NETMAK 105 GRADOS</p> 
        <div class="precio-tachado">
-        <s>$41.000</s><br>
+        <s>$125.000</s><br>
        </div> 
        <div class="precio-oferta">
-        $35.000 
+        $113.000 
 
        </div>
         <div class="ver-mas">
-          <a href="#" class="btn-ver-mas">Ver más</a>
+          <button class="btn-agregar" data-id="4" data-nombre="Silla de Escritorio" data-precio="113000">Agregar al carrito</button>
+        </div>
+       
+      
+    </article>
+
+    <article class="articulo">
+      <img src="img/articulo5.svg" alt="Artículo 5">
+      <p>Monitor LG 24" 180Hz Ultragear 24GS60F </p> 
+       <div class="precio-tachado">
+        <s>$300.000</s><br>
+       </div> 
+       <div class="precio-oferta">
+        $290.000
+
+       </div>
+        <div class="ver-mas">
+          <button class="btn-agregar" data-id="5" data-nombre="Monitor LG24 180HZ" data-precio="290000">Agregar al carrito</button>
         </div>
        
       
@@ -180,35 +180,35 @@
       <img src="img/articulo-nuevo1.webp" alt="Artículo Nuevo 1">
       <p>Mouse Trust Fyda Wireless Recargable Black USB</p>
       <span class="precio">$30.000</span>
-      <button class="btn-agregar">Agregar al carrito</button>
+      <button class="btn-agregar" data-id="6" data-nombre="Mouse Trust Fyda Wireless" data-precio="30000">Agregar al carrito</button>
     </article>
 
     <article class="articulo-nuevo">
       <img src="img/articulo-nuevo2.webp" alt="Artículo Nuevo 2">
       <p>Micro CPU AMD Ryzen 5 7600 AM5</p>
       <span class="precio">$350.000</span>
-      <button class="btn-agregar">Agregar al carrito</button>
+      <button class="btn-agregar" data-id="7" data-nombre="Micro R5 7600AM5" data-precio="350000">Agregar al carrito</button>
     </article>
 
     <article class="articulo-nuevo">
       <img src="img/articulo-nuevo3.webp" alt="Artículo Nuevo 3">
       <p>Mother MSI B650 GAMING PLUS WIFI DDR5 AM5</p>
       <span class="precio">$290.000</span>
-      <button class="btn-agregar">Agregar al carrito</button>
+      <button class="btn-agregar" data-id="8" data-nombre="Mother MSI B650 Gaming PLUS" data-precio="290000">Agregar al carrito</button>
     </article>
 
     <article class="articulo-nuevo">
       <img src="img/articulo-nuevo4.webp" alt="Artículo Nuevo 4">
       <p>Monitor LG 20" Led panel TN HD+ 75Hz HDMI</p>
       <span class="precio">$150.000</span>
-      <button class="btn-agregar">Agregar al carrito</button>
+      <button class="btn-agregar" data-id="9" data-nombre="Monitor LG20 75HZ HDMI" data-precio="150000">Agregar al carrito</button>
     </article>
 
     <article class="articulo-nuevo">
       <img src="img/articulo-nuevo5.webp" alt="Artículo Nuevo 5">
       <p>Auricular HP Deep Bass Usb + 3.5mm</p>
       <span class="precio">$60.000</span>
-      <button class="btn-agregar">Agregar al carrito</button>
+      <button class="btn-agregar" data-id="10" data-nombre="Auricular HP Deep BASS USB" data-precio="60000">Agregar al carrito</button>
     </article>
 
   </div>
@@ -260,6 +260,13 @@
 </div>
 </footer>
           <script src="script/style.js"></script>  
+          <!-- Contenedor del carrito (inicialmente oculto) -->
+<div id="carrito-modal" style="display:none; position:fixed; top:70px; right:20px; background:#222; color:#fff; padding:20px; border-radius:8px; z-index:2000; min-width:250px;">
+  <h3>Carrito</h3>
+  <ul id="carrito-lista" style="list-style:none; padding:0; margin:0;"></ul>
+  <button id="cerrar-carrito" style="margin-top:10px;">Cerrar</button>
+  <button id="vaciar-carrito" style="margin-top:10px; margin-left:10px; background:#e74c3c; color:#fff;">Vaciar carrito</button>
+</div>
 </body>
 
 </html>

@@ -48,6 +48,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   padding: 0 40px;
+  padding-bottom: 10px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7));
 }
 .nav-menu {
@@ -348,6 +349,7 @@ input[type="radio"] {
   color: #3ba3f3;
   font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .precio-oferta:hover {
@@ -355,32 +357,10 @@ input[type="radio"] {
   transition: 0.5s;
 }
 
-.ver-mas {
-  background: #3ba3f3;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 10px;
-  text-decoration: none;
-  
-}
 
-.btn-ver-mas {
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.btn-ver-mas:hover {
-  color: #2176bd;
-  transition: 0.5s;
-}
+
+
+
 /* fin articulos ofertas */
 /* Comienzo articulos nuevos*/
 .articulos-nuevos {
@@ -587,11 +567,13 @@ input[type="radio"] {
   .nav-toggle {
     display: flex;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 8px;
     
   }
   .cart-link {
-    display: none;
+    display: flex;
+    align-items: center;
+    margin-right: 8px; /* opcional, para separarlo del borde */
   }
    .slider {
     height: 260px;
@@ -611,7 +593,17 @@ input[type="radio"] {
   background: #3ba3f3;
   transition: background 0.3s;
 }
+.logo {
+    width: 100px;
+    padding-left: 16px;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .logo-link {
+    padding-left: 8px;
+  }
 }
+
 
 
 @media (max-width: 600px) {
@@ -688,6 +680,16 @@ input[type="radio"] {
     box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   }
 
+  .logo {
+    width: 80px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 10px;
+  }
+  .logo-link {
+    padding-left: 4px;
+  }
+  
 }
 
 
