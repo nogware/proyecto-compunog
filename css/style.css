@@ -603,6 +603,14 @@ input[type="radio"] {
     width: 100%;
     object-fit: cover;
   }
+  .manual-btn {
+  border: 1.5px solid #000000;
+  padding: 1.5px;      /* Más pequeño que el valor anterior */
+  border-radius: 50%;
+  cursor: pointer;
+  background: #3ba3f3;
+  transition: background 0.3s;
+}
 }
 
 
@@ -659,6 +667,27 @@ input[type="radio"] {
     height: 30px;
     font-size: 1.5rem;
   }
+  .manual-btn {
+  border: 1.5px solid #000000;
+  padding: 0.5px;      /* Más pequeño que el valor anterior */
+  border-radius: 50%;
+  cursor: pointer;
+  background: #3ba3f3;
+  transition: background 0.3s;
+}
+.nav-menu {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 48px; /* Ajusta según el alto de tu header en móvil */
+    border-radius: 0 0 10px 10px;
+    padding: 20px 0 10px 0;
+  }
+  .nav-menu.active {
+    background: rgba(24,24,24,0.98);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
 }
 
 
